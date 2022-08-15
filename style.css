@@ -334,7 +334,9 @@ a:hover {
 
 .nav > li a:hover,
 .nav > li a:focus {
-    background: transparent;
+    color:#FFF;
+    font-weight: bold;
+    background: #CD4B0E;
 }
 
 .navbar-toggle {
@@ -457,7 +459,7 @@ nav .caret {
 .btn-d:hover,
 .btn-d:focus {
     color: #FFF;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(20, 14, 7, .7);/*Visibilité*/
 }
 
 button {
@@ -511,8 +513,8 @@ button {
 }
 
 .scrollToTop {
-    width: 40px;
-    height: 40px;
+    width: 50px; /*Visibilité*/
+    height: 50px;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -522,7 +524,8 @@ button {
 }
 
 .scrollToTop span {
-    margin-top: 6px;
+    margin-top: 5px;/*Visibilité*/
+    font-size: 24px;
 }
 
 .showScrollTop {
@@ -651,7 +654,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #575757;
 }
 
 .container {
@@ -677,7 +680,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 16px; /*11px trop petit*/
 }
 
 .tight-width-whitespace {
@@ -705,8 +708,13 @@ p {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 2rem;
+    font-weight: 700;
     line-height: 1.4em;
+}
+
+.h2-page2 {
+font-size: 1.5rem;
 }
 
 h3 {
@@ -753,13 +761,13 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(140, 85, 27, 0.7);/*contraste*/
     padding: 40px 40px 40px 40px;
 }
 
 .bold-link {
     font-weight: 900;
-    text-decoration: underline!important;
+    text-decoration: underline;/*éviter les !important*/
 }
 
 .bgc-white {
@@ -771,21 +779,22 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-color: #CD4B0E;
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #FFF!important;
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #CD4B0E;
     color: #FFFFFF!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+.btn-atomic-tangerine:hover, .btn-atomic-tangerine:focus {
+    background: #da9271!important;
+    color: #FFF!important;
+    font-weight: 800;
 }
 
 .ltc-white {
@@ -793,11 +802,11 @@ h4 {
 }
 
 .ltc-white:hover {
-    color: #cccccc!important;
+    color: #cccccc;
 }
 
 .ltc-atomic-tangerine {
-    color: #F3976C!important;
+    color: #CD4B0E!important;
 }
 
 .ltc-atomic-tangerine:hover {
@@ -824,6 +833,26 @@ h4 {
 .bg-presentation {
     background-image: url("img/image-de-presentation.bmp");
 }
+
+.txt {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.bold-link:focus, .bold-link:hover {
+    padding: 7px 9px 9px;
+    border-radius: 9px;
+    background-color: #CD4B0E;
+    text-decoration: none;
+    color: #FFF;
+}
+.navbar-toggle:focus, .navbar-toggle:hover {
+    transform: scale(1.1);
+}
+
+/*.social-content {
+width: 20%;
+} A voir plus tard*/
 
 @media (max-width: 1024px) {
     .bloc {
@@ -886,6 +915,9 @@ h4 {
         padding: 0 20px;
         padding-left: constant(safe-area-inset-left);
         padding-right: constant(safe-area-inset-right);
+    }
+    .card:hover, .cardf:focus{
+        transform: scale(1.1);
     }
 }
 
@@ -1026,7 +1058,15 @@ h4 {
         width: 180px;
         height: 320px;
     }
+
 }
+@media (max-width: 767px) {
+    .img-responsive {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 @media (max-width: 400px) {
     .bloc {
